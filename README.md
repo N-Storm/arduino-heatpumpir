@@ -41,6 +41,9 @@ An Arduino library to control pump/split unit air conditioner. Currently support
    * Tested with: RAS-10G2KVP-E RAS-10G2AVP-E and RAS-13G2KVP-E RAS-13G2AVP-E
 * Tosot T18H-SN/I (remote control P/N YAA1FB) as GreeYAA variant
    * Also marketed as Tadiran brand
+* Vaillant VAI8 (remote control P/N YAN1F1), a Gree YAA variant
+   * Tested and fully working with VAI8-025WNI
+   * Does not support iFeel, all other (essential) features are implemented, note the custom send() for commanding turbo and panel light
 * ZH/LT-01 remote control
    * Brands: Eurom, Chigo, Tristar, Tecnomaster, Elgin, Geant, Tekno, Topair, 
              Proma, Sumikura, JBS, Turbo Air, Nakatomy, Celestial Air, Ager,
@@ -70,7 +73,7 @@ Note that depending on your board, certain GPIO's might not be available. For ex
 
 ### ESPEasy on ESP8266 board
 
-This library (together with the HeatpumpIR plugin) is integrated into the ESP Easy firmware. The a look here: https://github.com/letscontrolit/ESPEasy
+This library (together with the HeatpumpIR plugin) is integrated into the ESP Easy firmware. Take a look here: https://github.com/letscontrolit/ESPEasy
 * Download the pre-built firmware under the 'Releases' tab
 * HeatpumpIR is included in the 'minimalIRext' images
 * Documentation: https://espeasy.readthedocs.io/en/latest/Plugin/P088.html#p088-page
