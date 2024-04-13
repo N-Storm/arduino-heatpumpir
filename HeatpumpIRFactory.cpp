@@ -29,6 +29,10 @@ HeatpumpIR* HeatpumpIRFactory::create(const char *modelName) {
     return new GreeYAAHeatpumpIR();
   } else if (strcmp_P(modelName, PSTR("greeyan")) == 0) {
     return new GreeYANHeatpumpIR();
+  } else if (strcmp_P(modelName, PSTR("greeyac")) == 0) {
+    return new GreeYACHeatpumpIR();
+  } else if (strcmp_P(modelName, PSTR("greeyt")) == 0) {
+    return new GreeYTHeatpumpIR();
   } else if (strcmp_P(modelName, PSTR("hisense_aud")) == 0) {
     return new HisenseHeatpumpIR();
   } else if (strcmp_P(modelName, PSTR("hitachi")) == 0) {
@@ -37,6 +41,8 @@ HeatpumpIR* HeatpumpIRFactory::create(const char *modelName) {
     return new HyundaiHeatpumpIR();
   } else if (strcmp_P(modelName, PSTR("ivt")) == 0) {
     return new IVTHeatpumpIR();
+  } else if (strcmp_P(modelName, PSTR("nibe")) == 0) {
+	return new NibeHeatpumpIR();
   } else if (strcmp_P(modelName, PSTR("midea")) == 0) {
     return new MideaHeatpumpIR();
   } else if (strcmp_P(modelName, PSTR("mitsubishi_fa")) == 0) {
